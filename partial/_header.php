@@ -23,7 +23,9 @@ echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           Top Categories
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-       $result1 = mysqli_query($conn,$sql1);
+          ';
+          $sql1 = "SELECT * FROM `category`";
+      $result1 = mysqli_query($conn,$sql1);
       while($row1 = mysqli_fetch_assoc($result1)){
         echo '<a class="dropdown-item" href="#">'.$row1['cat_title'].'</a>';
       }
